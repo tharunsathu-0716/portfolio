@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Me</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
     <header>
@@ -21,14 +21,32 @@
     </header>
 
     <section>
-        <h2>Contact Me</h2>
+        <h2>Contact Information</h2>
         <p>Email: <a href="mailto:slf167@txstate.edu">slf167@txstate.edu</a></p>
-        <p>LinkedIn: <a href="http://www.linkedin.com/in/tharun-sathu-2560a61a6/" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">My GitHub</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tharun-sathu-2560a61a6/" target="_blank">LinkedIn Profile</a></p>
+        <p>GitHub: <a href="https://github.com/tharunsathu-0716" target="_blank">My GitHub</a></p>
+    </section>
+
+    <section>
+        <h2>Get in Touch</h2>
+        <form id="contact-form" action="mailto:slf167@txstate.edu" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+            
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+            
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+            
+            <button type="submit" class="button">Send Message</button>
+        </form>
     </section>
 
     <footer>
         <p>© 2025 Tharun Sathu. All rights reserved.</p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

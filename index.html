@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tharun Sathu - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/images/profile.jpeg" type="image/jpeg" />
+    <!-- AOS CSS for Animations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
     <header>
-        <h1>Tharun Sathu</h1>
+        <h1 data-aos="fade-down">Tharun Sathu</h1>
+        <h2 data-aos="fade-up">I am a <span id="animated-text"></span></h2>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -18,22 +22,41 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle" class="button">Toggle Dark Mode</button>
     </header>
 
-    <section id="home">
+    <section id="home" data-aos="fade-up">
         <h2>Welcome to My Portfolio</h2>
         <p>Hi, I'm <strong>Tharun Sathu</strong>, a passionate Computer Science Master's student at Texas State University.</p>
-        <p>I am constantly adapting and refining my skills to have an exponentially increasing curve of learning new things.</p>
-        <p>I enjoy meeting new people and hearing new perspectives, especially on software products and emerging tech.</p>
+        <p>I am constantly adapting and refining my skills to have an exponentially increasing curve of learning new things. I enjoy meeting new people and hearing new perspectives, especially on software products and emerging tech.</p>
+        
+        <img src="assets/images/profile.jpeg" alt="Professional headshot of Tharun Sathu" class="profile-img" />
 
-        <img src="assets/images/profile.jpeg" alt="Tharun Sathu" class="profile-img" />
-
-        <a href="assets/resume.pdf" download class="button">Resume</a>
-        <a href="assets/academic_transcript.pdf" download class="button">Academic Transcript</a>
+        <br />
+        <a href="assets/resume.pdf" download class="button">Download Resume</a>
+        <a href="assets/academic_transcript.pdf" download class="button">Download Transcript</a>
     </section>
 
     <footer>
         <p>© 2025 Tharun Sathu. All rights reserved.</p>
     </footer>
+
+    <!-- Typed.js for Typing Animation -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- AOS Library for Scroll Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Typed.js Animation
+        var typed = new Typed('#animated-text', {
+            strings: ["Software Engineer", "Cloud Enthusiast", "Tech Explorer"],
+            typeSpeed: 80,
+            backSpeed: 50,
+            loop: true
+        });
+
+        // Initialize AOS
+        AOS.init();
+    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
